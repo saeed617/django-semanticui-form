@@ -1,0 +1,28 @@
+{% block label %}
+    {% if field.label %}
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% endif %}
+{% endblock %}
+
+{% block field %}
+    {% if 'icon' in field.field.widget.attrs %}
+        <div class="ui icon input">
+            {{ field }}
+            <i class="ui icon {{ field.field.widget.attrs.icon }}"></i>
+        </div>
+    {% else %}
+        {{ field }}
+    {% endif %}
+{% endblock %}
+
+{% block errors %}
+    {% for error in field.errors %}
+        <span class="ui pointing red basic label">{{ error }}</span>
+    {% endfor %}
+{% endblock %}
+
+{% if field.help_text %}
+    <div class="label">
+        {{ field.help_text|safe }}
+    </div>
+{% endif %}
