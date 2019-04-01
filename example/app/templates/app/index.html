@@ -1,0 +1,52 @@
+<!DOCTYPE html>{% load semanticui %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django semantic form</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui grid container">
+    <div class="row">
+        <div class="column">
+            <h1 class="ui header">SemanticUI form example</h1>
+
+            <p>below demostate how the form looks with SemanticUI</p>
+        </div>
+    </div>
+
+    <!-- basic example -->
+    <div class="row">
+        <div class="column">
+            <h2 class="ui header">Basic example</h2>
+
+            <hr/>
+
+            <form class="ui form" role="form">
+                {{ form|semanticui_form}}
+                <input type="button" class="ui button" value="Submit"/>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- inline form -->
+{#    <div class="row">#}
+{#        <div class="column">#}
+{#            <h2 class="ui header">Inline form</h2>#}
+{##}
+{#            <hr/>#}
+{##}
+{#            <form class="ui form" role="form">#}
+{#                {{ form|semanticui_inline }}#}
+{#                <input type="button" class="ui button" value="Submit"/>#}
+{#            </form>#}
+{#        </div>#}
+{#    </div>#}
+
+</div>
+</body>
+
+</html>

@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .forms import ExampleForm
+
+
+def index(request):
+    form = ExampleForm()
+    return render(request, 'app/index.html', {'form': form})
