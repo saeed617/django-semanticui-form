@@ -1,9 +1,8 @@
 from setuptools import setup, find_packages
-from semanticuiform.meta import VERSION
 
 setup(
     name='django-semanticui-form',
-    version=str(VERSION),
+    version='1.0.0',
     description="django-semanticui-form",
     classifiers=[
         "Programming Language :: Python",
